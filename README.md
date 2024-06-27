@@ -87,6 +87,23 @@ body_checks = regexp:/etc/postfix/body_checks
 sudo systemctl restart postfix
 ```
 
+
+## Test
+
+
+Konuya göre bir engelleme işlemi yapmıştık. Gördüğünüz gibi başarılı şekilde çalıştı.
+
+```
+Jun 27 21:39:43 localhost postfix/cleanup[2712]: 906F418067A: reject: header Subject: Yusuf from mail-yb1-f174.google.com[209.85.219.174]; from=<testmaili34@gmail.com> to=<ugur@ugurcomptech.com.tr> proto=ESMTP helo=<mail-yb1-f174.google.com>: 5.7.1 message content rejected
+```
+
+Mail bazlı bir engelleme işlemi yapmıştık. Gördüğünüz gibi başarılı şekilde çalıştı.
+
+```
+Jun 27 21:41:17 localhost postfix/smtpd[3524]: NOQUEUE: reject: RCPT from mail-yb1-f176.google.com[209.85.219.176]: 554 5.7.1 <ugurcomptech@gmail.com>: Sender address rejected: Access denied; from=<ugurcomptech@gmail.com> to=<ugur@ugurcomptech.com.tr> proto=ESMTP helo=<mail-yb1-f176.google.com>
+```
+
+
 ## NOT
 
 Bu güvenlik yöntemi basit bir önlem alma yoludur. Daha karışık yapılara ihtiyacınız var ise SpamAssasin gibi servisler kullanabilirsiniz.
