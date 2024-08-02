@@ -68,7 +68,7 @@ sudo nano /etc/postfix/body_checks
 /Yusuf/ REJECT
 ```
 
-##main.cf Dosyasını Güncelleme
+## main.cf Dosyasını Güncelleme
 
 main.cf dosyasını açın ve header_checks ve body_checks yapılandırmalarını ekleyin:
 
